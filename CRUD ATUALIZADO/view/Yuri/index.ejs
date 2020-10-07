@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Livro</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    nav div {
+        margin-left: 5px;
+    }
+    body {
+        background-color: rgba(67, 60, 170, 0.705);
+    }    
+    </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link btn btn-primary" href="/">Home</a>
+        </li>
+        <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cadastro de Alunos
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="cadastrar" href="/alunos/create">Novo Cadastro</a><br>
+                <a class="mostrar" href="/alunos/show">Mostrar Registros</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cadastro de Professores
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="cadastrar" href="/prof/create">Novo Cadastro</a><br>
+                <a class="mostrar" href="/prof/show">Mostrar Registros</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cadastro de Livros
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            
+                <a class="cadastrar" href="/livros/create">Novo Cadastro</a><br>
+                <a class="mostrar" href="/livros/show">Mostrar Registros</a>
+            </div>  
+        </div>
+    </ul>
+</nav>
+ 
+</div>
+    <script>
+     $(function () {
+      $('.dropdown-toggle').dropdown();
+        });
+      </script>
+         <style>
+          .container {
+              margin-top: 25px;
+          }
+            </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <td><h1>Registro de Livro<span class="badge badge-secondary"></span></h1></td>
+          </div>
+          <h2></h2>
+          <div class="container">
+            <h2></h2>
+            </div>
+          </div>
+    <form action="/show" method="POST">     
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Titulo do Livro:*</label>
+        <input type="text" class="form-control" placeholder="Titulo do Livro" name="name" required>
+      </div>
+      
+      
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Autor do Livro:*</label>
+        <input type="text" class="form-control" placeholder="Autor do Livro" name="surname" required>
+      </div>
+         
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Quantidade de Páginas:</label>
+        <input type="text" class="form-control" placeholder="Ex: 365" name="quant">
+        </div>
+           
+       
+
+      <div class="form-group">
+        <label for="local">Seção:</label>
+        <br>
+        <input type="radio" id="A" name="local" value="A">
+        <label for="Secao A">Seção A</label><br>
+        <input type="radio" id="B" name="local" value="B">
+        <label for="Secao B">Seção B</label><br>
+        <input type="radio" id="C" name="local" value="C">
+        <label for="Secao C">Seção C</label><br>
+        <input type="radio" id="D" name="local" value="D">
+        <label for="Secao D">Seção D</label><br>
+        <input type="radio" id="E" name="local" value="E">
+        <label for="Secao E">Seção E</label><br>
+</div>
+            
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Tema:*</label>
+        <input type="text" class="form-control" placeholder="Ex: Terror, Aventura, Cómedia" name="tema" required>        
+      </div>
+    
+      <div class="form-group">
+        <label for="classi">Classificação Indicativa:*</label>
+        <br>
+        <select name="classi">
+            <option value="L">L</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+        </select>
+</div>
+          
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Descrição:</label>
+        <input type="text" class="form-control" placeholder="Ex: " name="descri"> 
+       </div>
+     
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Editora:*</label>
+        <input type="text" class="form-control" placeholder="Ex: " name="resumo" required>        
+      </div>
+     
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">REGISTRAR</button>
+      </div>
+    </form>
+      </body>
+      </html>
